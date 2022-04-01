@@ -1,10 +1,11 @@
+using aspnet_razor_shopping.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<ShoppingDbContext>(opt => opt.UseSqlite(
+builder.Services.AddDbContext<ShoppingDbContext>(opt => opt.UseLazyLoadingProxies().UseSqlite(
 	builder.Configuration.GetConnectionString("ShoppingCartDB"))
 );
 

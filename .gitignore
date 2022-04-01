@@ -4,7 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 appsettings.json
-
+shopping.db-shm
+shopping.db-wal
 # User-specific files
 *.rsuser
 *.suo
